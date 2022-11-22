@@ -10,6 +10,11 @@
 
 https://user-images.githubusercontent.com/98838876/203415954-4414dc95-81cf-454e-b80b-e6f49112f25c.mp4
 
+<b>:round_pushpin:Main Story </b>
+
+![image](https://user-images.githubusercontent.com/98838876/203418993-02a67f07-855a-4555-98a1-e3457275161f.png)
+
+
 <b> :round_pushpin: Pulled data from API connections by creating a class </b>
 
 ![image](https://user-images.githubusercontent.com/98838876/203416601-e161ff73-cf18-4c1e-9868-e18221860db0.png)
