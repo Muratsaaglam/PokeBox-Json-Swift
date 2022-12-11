@@ -1,4 +1,4 @@
-# PokeBox-Swift-Json
+# PokeBox-Json-Swift
 
 <b> ▶️ Made encyclopedia listing Pokemon using the Pokedex Api in UIkit and Swift.</b>
 
