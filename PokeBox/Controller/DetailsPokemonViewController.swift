@@ -15,7 +15,7 @@ class DetailsPokemonViewController: UIViewController
     @IBOutlet weak var typePokemon: UILabel!
     @IBOutlet weak var descriptionPokemon: UITextView!
     
-    //Veriables
+    //Variables
     var pokemonShow: Pokemon?
     
     override func viewDidLoad()

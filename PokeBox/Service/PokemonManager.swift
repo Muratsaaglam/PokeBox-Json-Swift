@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol pokemonManagerDelegede
+protocol pokemonManagerDelegate
 {
     func showListPokemon(lists: [Pokemon])
 }
 
 struct PokemonManager
 {
-    var delegade: pokemonManagerDelegede?
+    var delegate: pokemonManagerDelegate?
     
     func verPokemon()
     {
@@ -24,7 +24,7 @@ struct PokemonManager
         {
             let session = URLSession(configuration: .default)
             
-            let tarea = session.dataTask(with: url) { data, respuesta, error in
+            let tarea = session.dataTask(with: url) { data, response, error in
                 if error != nil
                 {
                     print("Error API ",error?.localizedDescription)
@@ -35,7 +35,7 @@ struct PokemonManager
                     if let listedPokemon = self.parsearJSON(dataPokemon: dataSegue)
                     {
                         print("List Pokemon: ", listedPokemon)
-                        delegade?.showListPokemon(lists: listedPokemon)
+                        delegate?.showListPokemon(lists: listedPokemon)
                     }
                 }
             }
@@ -46,12 +46,12 @@ struct PokemonManager
     
     func parsearJSON(dataPokemon: Data) -> [Pokemon]?
     {
-        let decodificador = JSONDecoder()
+        let decoder = JSONDecoder()
         do
         {
-            let datosDecodificados = try decodificador.decode([Pokemon].self, from: dataPokemon)
+            let dataDecoders = try decoder.decode([Pokemon].self, from: dataPokemon)
             
-            return datosDecodificados
+            return dataDecoders
             
         }
         catch
@@ -64,10 +64,10 @@ struct PokemonManager
 
 extension Data
 {
-    func parseData(quitarString palabra: String) -> Data?
+    func parseData(quitarString words: String) -> Data?
     {
         let dataAsString = String(data: self, encoding: .utf8)
-        let parseDataString = dataAsString?.replacingOccurrences(of: palabra, with: "")
+        let parseDataString = dataAsString?.replacingOccurrences(of: words, with: "")
         guard let data = parseDataString?.data(using: .utf8) else { return nil }
         return data
     }

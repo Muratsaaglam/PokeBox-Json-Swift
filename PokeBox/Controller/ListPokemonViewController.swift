@@ -9,7 +9,7 @@ import UIKit
 
 class ListPokemonViewController: UIViewController
 {
-
+    //IBOutlets
     @IBOutlet weak var searchBarPokemon: UISearchBar!
     @IBOutlet weak var tableViewPokemon: UITableView!
     
@@ -19,7 +19,6 @@ class ListPokemonViewController: UIViewController
     var pokemonFilter: [Pokemon] = []
     var pokemonSelected: Pokemon?
     
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -28,7 +27,8 @@ class ListPokemonViewController: UIViewController
         //Register TableViewCell
         tableViewPokemon.register(UINib(nibName: "CellNewPokemonTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         
-        pokemonManager.delegade = self
+        //DataSource && Delegate
+        pokemonManager.delegate = self
         searchBarPokemon.delegate = self
         tableViewPokemon.delegate = self
         tableViewPokemon.dataSource = self
@@ -39,7 +39,7 @@ class ListPokemonViewController: UIViewController
     }
 }
 
-//TableView-Setup
+//TableView Protocol
 extension ListPokemonViewController: UITableViewDelegate, UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -118,7 +118,7 @@ extension ListPokemonViewController: UISearchBarDelegate
 }
 
 //Delegate Pokemon
-extension ListPokemonViewController: pokemonManagerDelegede
+extension ListPokemonViewController: pokemonManagerDelegate
 {
     func showListPokemon(lists: [Pokemon])
     {
