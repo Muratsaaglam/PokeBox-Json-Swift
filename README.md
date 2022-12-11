@@ -17,7 +17,7 @@ https://user-images.githubusercontent.com/98838876/203415954-4414dc95-81cf-454e-
 
 <b> :round_pushpin: Pulled data from API connections by creating a class </b>
 
-![image](https://user-images.githubusercontent.com/98838876/203416601-e161ff73-cf18-4c1e-9868-e18221860db0.png)
+![image](https://user-images.githubusercontent.com/98838876/206896403-ad94012b-f92e-45ef-8090-50f7d9a533f5.png)
 
 <b> :round_pushpin: You can use the news api connection for the api key. </b>
 <b> https://pokedex-bb36f.firebaseio.com/pokemon.json </b>
@@ -40,7 +40,7 @@ https://user-images.githubusercontent.com/98838876/203415954-4414dc95-81cf-454e-
 
 <b> :no_entry: ListPokemonViewController :no_entry: </b>
 
-![image](https://user-images.githubusercontent.com/98838876/203417241-40fa3886-55ec-4b92-bbbc-afc004c816ca.png)
+![image](https://user-images.githubusercontent.com/98838876/206896473-12e57c25-4881-41af-bc21-e04e6a42b5e2.png)
 
 
 <b> :round_pushpin: SearchBar </b>
